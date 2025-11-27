@@ -1,0 +1,119 @@
+<idea-plugin>
+    <id>com.sallemi.gemini</id>
+    <name>Gemini Assistant Pro</name>
+    <vendor email="contact@sallemi.com">Ahmed Sallemi</vendor>
+
+    <description>
+        <![CDATA[
+        Full-featured AI assistant powered by Google Gemini models for code completion, explanations, refactors, documentation, error analysis, testing, translation, and more.
+        ]]>
+    </description>
+
+    <idea-version since-build="252" until-build="252.*"/>
+
+    <!-- Core platform dependencies -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <!-- Plugin dependencies -->
+    <depends>com.intellij.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Gemini"
+                    anchor="right"
+                    factoryClass="com.sallemi.gemini.ui.GeminiToolWindowFactory"
+                    icon="/icons/gemini.svg"/>
+
+        <projectService serviceImplementation="com.sallemi.gemini.services.GeminiService"/>
+
+        <applicationService serviceImplementation="com.sallemi.gemini.settings.GeminiSettingsState"/>
+
+        <applicationConfigurable displayName="Gemini Assistant"
+                                 parentId="tools"
+                                 id="com.sallemi.gemini.settings"
+                                 instance="com.sallemi.gemini.settings.GeminiSettingsConfigurable"/>
+    </extensions>
+
+    <actions>
+        <action id="com.sallemi.gemini.actions.ExplainCodeAction"
+                class="com.sallemi.gemini.actions.ExplainCodeAction"
+                text="Explain Code with Gemini"
+                description="Explain selected code using Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt shift X"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.GenerateDocsAction"
+                class="com.sallemi.gemini.actions.GenerateDocsAction"
+                text="Generate Documentation"
+                description="Generate documentation for selected code">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.SuggestNamesAction"
+                class="com.sallemi.gemini.actions.SuggestNamesAction"
+                text="Suggest Better Names"
+                description="Suggest better names with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.RuntimeErrorAction"
+                class="com.sallemi.gemini.actions.RuntimeErrorAction"
+                text="Explain Runtime Error"
+                description="Explain runtime error with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.RefactorAction"
+                class="com.sallemi.gemini.actions.RefactorAction"
+                text="Suggest Refactoring"
+                description="Suggest refactoring ideas with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt shift R"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.BugFinderAction"
+                class="com.sallemi.gemini.actions.BugFinderAction"
+                text="Find Bugs"
+                description="Find bugs in selected code with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.GenerateTestsAction"
+                class="com.sallemi.gemini.actions.GenerateTestsAction"
+                text="Generate Unit Tests"
+                description="Generate tests for selected code with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.ConvertLanguageAction"
+                class="com.sallemi.gemini.actions.ConvertLanguageAction"
+                text="Convert Code to Another Language"
+                description="Convert selected code to another language with Gemini">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.GeminiChatAction"
+                class="com.sallemi.gemini.actions.GeminiChatAction"
+                text="Gemini Chat"
+                description="Open Gemini chat tool window">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift G"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.GeminiExplainAction"
+                class="com.sallemi.gemini.actions.ExplainCodeAction"
+                text="Gemini Explain"
+                description="Explain selected code using Gemini">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+        </action>
+
+        <action id="com.sallemi.gemini.actions.FixCodeAction"
+                class="com.sallemi.gemini.actions.FixCodeAction"
+                text="Gemini Fix Code"
+                description="Find and fix issues in selected code using Gemini">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

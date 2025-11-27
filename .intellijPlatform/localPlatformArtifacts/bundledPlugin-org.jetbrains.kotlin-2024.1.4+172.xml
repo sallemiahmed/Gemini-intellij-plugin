@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.kotlin" revision="2024.1.4+172"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/root/.gradle/caches/transforms-4/a7a634b429ff60d3f8a7ca69fec55ac7/transformed/ideaIU-2024.1.4/plugins/Kotlin" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="241.18034.62+133"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="241.18034.62+699"/>
+  </dependencies>
+</ivy-module>

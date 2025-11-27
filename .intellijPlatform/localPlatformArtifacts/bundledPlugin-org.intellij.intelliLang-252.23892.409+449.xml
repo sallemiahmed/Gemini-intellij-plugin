@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.intellij.intelliLang" revision="252.23892.409+449"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/root/.gradle/caches/transforms-4/4103c4cd22fbd9cc31a198f3713aabab/transformed/ideaIU-2025.2/plugins/platform-langInjection" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="XPathView" rev="252.23892.409+795"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="252.23892.409+862"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,22 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="tanvd.grazi" revision="252.23892.409+496"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/root/.gradle/caches/transforms-4/4103c4cd22fbd9cc31a198f3713aabab/transformed/ideaIU-2025.2/plugins/grazie" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="252.23892.409+862"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.markdown" rev="252.23892.409+647"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="252.23892.409+187"/>
+    <dependency org="bundledModule" name="intellij.libraries.lucene.common" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.libraries.ai.grazie.spell.gec.engine.local" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.spellchecker" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.json.backend" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.properties.backend" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.properties.backend.psi" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.yaml.backend" rev="252.23892.409+250"/>
+  </dependencies>
+</ivy-module>

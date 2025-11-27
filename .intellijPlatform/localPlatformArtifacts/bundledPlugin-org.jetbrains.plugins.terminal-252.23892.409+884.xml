@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.plugins.terminal" revision="252.23892.409+884"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/root/.gradle/caches/transforms-4/4103c4cd22fbd9cc31a198f3713aabab/transformed/ideaIU-2025.2/plugins/terminal" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.sh" rev="252.23892.409+133"/>
+    <dependency org="bundledModule" name="intellij.platform.backend" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.platform.kernel.backend" rev="252.23892.409+250"/>
+    <dependency org="bundledModule" name="intellij.platform.frontend" rev="252.23892.409+250"/>
+  </dependencies>
+</ivy-module>
